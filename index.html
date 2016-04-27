@@ -166,7 +166,7 @@
             
               <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
             
-            Home
+            Startseite
           </a>
         </li>
       
@@ -176,7 +176,7 @@
             
               <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
             
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -229,6 +229,119 @@
             
               
                 
+                <a class="post-title-link" href="/2016/04/27/hexo加上next主题及其他设置/" itemprop="url">
+                  hexo加上next主题及其他设置
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2016-04-27T14:58:28+08:00" content="2016-04-27">
+              2016-04-27
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/04/27/hexo加上next主题及其他设置/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/27/hexo加上next主题及其他设置/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>###添加云标签<br>next主题添加后,点击主页的标签按钮,会跳转到/tags目录,并报”Cannot GET /tags/“错误,这并不是我们想看到的。需要进行标签页面的创建。  </p>
+<blockquote>
+<p>hexo new page “tags”  </p>
+</blockquote>
+<p>编辑刚新建的页面，将页面的类型设置为 tags ，主题将自动为这个页面显示标签云。页面内容如下：<br>&gt;</p>
+<blockquote>
+<p>title: Tagcloud<br>date: 2014-12-22 12:39:04<br>type: “tags”<br>comments: false # 关闭这个页面的多说或者 Disqus 评论</p>
+</blockquote>
+<p>在菜单中添加链接。编辑 主题配置文件 ，添加 tags 到 menu 中，如下:</p>
+<blockquote>
+<p>menu:<br>&nbsp;&nbsp;home: /<br>&nbsp;&nbsp;archives: /archives<br>&nbsp;&nbsp;tags: /tags</p>
+</blockquote>
+<p>ok，进行如上操作后,执行hexo -g, hexo -s 命令就可以在本地看到预览了。</p>
+
+          
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/04/21/markdown语法学习/" itemprop="url">
                   markdown语法学习
                 </a>
@@ -242,7 +355,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2016-04-21T20:17:50+08:00" content="2016-04-21">
               2016-04-21
             </time>
@@ -281,7 +394,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="http://ww2.sinaimg.cn/large/ab1cb1a6gw1f34lb5zskpj20cm0gota7.jpg" rel="gallery_cinicj0e1000124omzglral8n"
+                 href="http://ww2.sinaimg.cn/large/ab1cb1a6gw1f34lb5zskpj20cm0gota7.jpg" rel="gallery_cinij1d6p0003hsomofvws3rn"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="http://ww2.sinaimg.cn/large/ab1cb1a6gw1f34lb5zskpj20cm0gota7.jpg" itemprop="contentUrl"/>
               </a>
@@ -358,7 +471,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2016-04-19T14:26:08+08:00" content="2016-04-19">
               2016-04-19
             </time>
@@ -474,8 +587,8 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
-              <span class="site-state-item-name">posts</span>
+              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-name">Artikel</span>
             </a>
           </div>
 
@@ -485,7 +598,7 @@
             <div class="site-state-item site-state-tags">
               <a href="/tags">
                 <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">tags</span>
+                <span class="site-state-item-name">Tags</span>
               </a>
             </div>
           
@@ -529,7 +642,7 @@
 </div>
 
 <div class="powered-by">
-  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+  Erstellt mit  <a class="theme-link" href="http://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
