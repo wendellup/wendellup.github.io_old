@@ -80,7 +80,7 @@ baidu_analytics: f8e69dc99264c420cd9e737768788147
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
-deploy:
+deploy: 
   type: git
   repository: https://github.com/wendellup/wendellup.github.io.git
   branch: master
