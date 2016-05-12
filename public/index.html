@@ -245,6 +245,118 @@
             
               
                 
+                <a class="post-title-link" href="/2016/05/12/DigitalOcean反向代理google失败/" itemprop="url">
+                  DigitalOcean反向代理google失败
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-12T09:57:21+08:00" content="2016-05-12">
+              2016-05-12
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/12/DigitalOcean反向代理google失败/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/12/DigitalOcean反向代理google失败/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/05/12/DigitalOcean反向代理google失败/" class="leancloud_visitors" data-flag-title="DigitalOcean反向代理google失败">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="DigitalOcean反向代理google失败"><a href="#DigitalOcean反向代理google失败" class="headerlink" title="DigitalOcean反向代理google失败"></a>DigitalOcean反向代理google失败</h2><h3 id="议题-vps可以访问谷歌-准备用nginx搭建反向代理-这样不用翻墙也可以通过vps访问谷歌"><a href="#议题-vps可以访问谷歌-准备用nginx搭建反向代理-这样不用翻墙也可以通过vps访问谷歌" class="headerlink" title="议题:vps可以访问谷歌,准备用nginx搭建反向代理,这样不用翻墙也可以通过vps访问谷歌"></a>议题:vps可以访问谷歌,准备用nginx搭建反向代理,这样不用翻墙也可以通过vps访问谷歌</h3><h4 id="尝试一"><a href="#尝试一" class="headerlink" title="尝试一"></a>尝试一</h4><p>按照这篇文章(<a href="http://www.v2ex.com/t/126028" target="_blank" rel="external">http://www.v2ex.com/t/126028</a>) 中的方式进行了nginx配置,尝试http方式失败,直接申请了ssl证书开始尝试https方式反代谷歌,对应的nginx配置文件为(nginx.conf_google见文章结尾)。<br>配置好nginx后访问我的https域名(<a href="https://www.wendellup.com" target="_blank" rel="external">https://www.wendellup.com</a>) ,google主页是可以显示的,但是只要一搜索就跳转到<a href="https://www.wendellup.com/ipv4/sorry/IndexRedirect?continue=https://www.google.com/search%3" target="_blank" rel="external">https://www.wendellup.com/ipv4/sorry/IndexRedirect?continue=https://www.google.com/search%3</a>…..<br><img src="http://ww2.sinaimg.cn/large/ab1cb1a6gw1f3rkvca4unj20rb0d4wfn.jpg" alt=""><br>好郁闷,一直找不到原因。纠结了好长时间,不知是配置问题还是环境问题。于是乎尝试配置反代百度,对应的nginx配置文件为(nginx.conf_baidu见文章结尾)重启后nginx后访问域名,主页展现后搜索都正常,这下可以确认不是配置问题了。<br><img src="http://ww3.sinaimg.cn/large/ab1cb1a6gw1f3rkwf56o1j20sr0e340j.jpg" alt=""><br><img src="http://ww2.sinaimg.cn/large/ab1cb1a6gw1f3rkvfwmisj20pw0evq75.jpg" alt=""></p>
+<h4 id="尝试二"><a href="#尝试二" class="headerlink" title="尝试二"></a>尝试二</h4><p>确认不是配置问题后尝试了github上知名wen.lu的配置方法(<a href="https://github.com/cuber/ngx\_http\_google\_filter\_module/blob/master/README.zh-CN.md" target="_blank" rel="external">https://github.com/cuber/ngx\_http\_google\_filter\_module/blob/master/README.zh-CN.md</a>) ,按照他的安装配置方式进行搭建。搭建成功后访问我的https域名(<a href="https://www.wendellup.com" target="_blank" rel="external">https://www.wendellup.com</a>) ,主页访问正常,但一搜索也出现问题。<br><img src="http://ww4.sinaimg.cn/large/ab1cb1a6gw1f3rkvi15xfj20wr0g1gpz.jpg" alt=""><br>在网上进行了搜索(vps的ip被谷歌当成机器人),大概原因是因为有人用DO和我相邻的IP段对google做坏事,导致我的vps的ip无法正常反代google。这样也大致猜出尝试一中反代谷歌搜索失败的原因咯。</p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>一顿操作只能反代baidu成功,哈哈哈,纯当学习了吧。翻墙还是老老实实的用我的<a href="http://gjsq.me/3799512" target="_blank" rel="external">greenVPN</a>吧。</p>
+
+          
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/04/30/如何在不同电脑上更新hexo博客/" itemprop="url">
                   '如何在不同电脑上更新hexo博客'
                 </a>
@@ -564,7 +676,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="http://ww2.sinaimg.cn/large/ab1cb1a6gw1f34lb5zskpj20cm0gota7.jpg" rel="gallery_cinnbtipo0002i0j7xeq6homm"
+                 href="http://ww2.sinaimg.cn/large/ab1cb1a6gw1f34lb5zskpj20cm0gota7.jpg" rel="gallery_cio3nk1j20004zoome9orh6h0"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="http://ww2.sinaimg.cn/large/ab1cb1a6gw1f34lb5zskpj20cm0gota7.jpg" itemprop="contentUrl"/>
               </a>
@@ -648,7 +760,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -658,7 +770,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

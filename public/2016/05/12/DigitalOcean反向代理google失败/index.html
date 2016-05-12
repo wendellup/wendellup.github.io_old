@@ -64,7 +64,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="hexo," />
+  <meta name="keywords" content="nginx,vps," />
 
 
 
@@ -80,19 +80,21 @@
 
 
 
-<meta name="description" content="作者：CrazyMilk链接：https://www.zhihu.com/question/21193762/answer/79109280来源：知乎著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-其实，Hexo生成的文件里面是有一个.gitignore的，所以它的本意应该也是想我们把这些文件放到GitHub上存放的。但是考虑到如果每个GitHub Pages都需要额外的一个">
+<meta name="description" content="DigitalOcean反向代理google失败议题:vps可以访问谷歌,准备用nginx搭建反向代理,这样不用翻墙也可以通过vps访问谷歌尝试一按照这篇文章(http://www.v2ex.com/t/126028) 中的方式进行了nginx配置,尝试http方式失败,直接申请了ssl证书开始尝试https方式反代谷歌,对应的nginx配置文件为(nginx.conf_google见文章结尾)。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="'如何在不同电脑上更新hexo博客'">
-<meta property="og:url" content="http://wendellup.github.io/2016/04/30/如何在不同电脑上更新hexo博客/index.html">
+<meta property="og:title" content="DigitalOcean反向代理google失败">
+<meta property="og:url" content="http://wendellup.github.io/2016/05/12/DigitalOcean反向代理google失败/index.html">
 <meta property="og:site_name" content="wendellup's Blog">
-<meta property="og:description" content="作者：CrazyMilk链接：https://www.zhihu.com/question/21193762/answer/79109280来源：知乎著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-其实，Hexo生成的文件里面是有一个.gitignore的，所以它的本意应该也是想我们把这些文件放到GitHub上存放的。但是考虑到如果每个GitHub Pages都需要额外的一个">
-<meta property="og:updated_time" content="2016-05-12T01:54:58.693Z">
+<meta property="og:description" content="DigitalOcean反向代理google失败议题:vps可以访问谷歌,准备用nginx搭建反向代理,这样不用翻墙也可以通过vps访问谷歌尝试一按照这篇文章(http://www.v2ex.com/t/126028) 中的方式进行了nginx配置,尝试http方式失败,直接申请了ssl证书开始尝试https方式反代谷歌,对应的nginx配置文件为(nginx.conf_google见文章结尾)。">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/ab1cb1a6gw1f3rkvca4unj20rb0d4wfn.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/ab1cb1a6gw1f3rkwf56o1j20sr0e340j.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/ab1cb1a6gw1f3rkvfwmisj20pw0evq75.jpg">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/ab1cb1a6gw1f3rkvi15xfj20wr0g1gpz.jpg">
+<meta property="og:updated_time" content="2016-05-12T02:06:27.218Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="'如何在不同电脑上更新hexo博客'">
-<meta name="twitter:description" content="作者：CrazyMilk链接：https://www.zhihu.com/question/21193762/answer/79109280来源：知乎著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-其实，Hexo生成的文件里面是有一个.gitignore的，所以它的本意应该也是想我们把这些文件放到GitHub上存放的。但是考虑到如果每个GitHub Pages都需要额外的一个">
+<meta name="twitter:title" content="DigitalOcean反向代理google失败">
+<meta name="twitter:description" content="DigitalOcean反向代理google失败议题:vps可以访问谷歌,准备用nginx搭建反向代理,这样不用翻墙也可以通过vps访问谷歌尝试一按照这篇文章(http://www.v2ex.com/t/126028) 中的方式进行了nginx配置,尝试http方式失败,直接申请了ssl证书开始尝试https方式反代谷歌,对应的nginx配置文件为(nginx.conf_google见文章结尾)。">
+<meta name="twitter:image" content="http://ww2.sinaimg.cn/large/ab1cb1a6gw1f3rkvca4unj20rb0d4wfn.jpg">
 
 
 
@@ -110,7 +112,7 @@
   };
 </script>
 
-  <title> '如何在不同电脑上更新hexo博客' | wendellup's Blog </title>
+  <title> DigitalOcean反向代理google失败 | wendellup's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -246,7 +248,7 @@
             
             
               
-                '如何在不同电脑上更新hexo博客'
+                DigitalOcean反向代理google失败
               
             
           </h1>
@@ -258,8 +260,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-30T23:48:43+08:00" content="2016-04-30">
-              2016-04-30
+            <time itemprop="dateCreated" datetime="2016-05-12T09:57:21+08:00" content="2016-05-12">
+              2016-05-12
             </time>
           </span>
 
@@ -269,8 +271,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/04/30/如何在不同电脑上更新hexo博客/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/30/如何在不同电脑上更新hexo博客/" itemprop="commentsCount"></span>
+                <a href="/2016/05/12/DigitalOcean反向代理google失败/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/12/DigitalOcean反向代理google失败/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -280,7 +282,7 @@
 
           
           
-             <span id="/2016/04/30/如何在不同电脑上更新hexo博客/" class="leancloud_visitors" data-flag-title="'如何在不同电脑上更新hexo博客'">
+             <span id="/2016/05/12/DigitalOcean反向代理google失败/" class="leancloud_visitors" data-flag-title="DigitalOcean反向代理google失败">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -302,33 +304,9 @@
       
 
       
-        <p>作者：CrazyMilk<br>链接：<a href="https://www.zhihu.com/question/21193762/answer/79109280" target="_blank" rel="external">https://www.zhihu.com/question/21193762/answer/79109280</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
-<p>其实，Hexo生成的文件里面是有一个.gitignore的，所以它的本意应该也是想我们把这些文件放到GitHub上存放的。但是考虑到如果每个GitHub Pages都需要额外的一个仓库存放这些文件，就显得特别冗余了。这个时候就可以用分支的思路！一个分支用来存放Hexo生成的网站原始的文件，另一个分支用来存放生成的静态网页。</p>
-<p>最近我也用GitHub Pages搭建了一个独立博客，想到了这个方法，使用之后真的特别简洁。为了更直观地说明，奉上使用这种方法不同时候的流程：</p>
-<p>———————————————————– 华丽的分割线1 ———————————————————-<br>一、关于搭建的流程</p>
-<ol>
-<li>创建仓库，<a href="http://CrazyMilk.github.io；" target="_blank" rel="external">http://CrazyMilk.github.io；</a></li>
-<li>创建两个分支：master 与 hexo；</li>
-<li>设置hexo为默认分支（因为我们只需要手动管理这个分支上的Hexo网站文件）；</li>
-<li>使用git clone git@github.com:CrazyMilk/CrazyMilk.github.io.git拷贝仓库；</li>
-<li>在本地<a href="http://CrazyMilk.github.io文件夹下通过Git" target="_blank" rel="external">http://CrazyMilk.github.io文件夹下通过Git</a> bash依次执行npm install hexo、hexo init、npm install 和 npm install hexo-deployer-git（此时当前分支应显示为hexo）;</li>
-<li>修改_config.yml中的deploy参数，分支应为master；</li>
-<li>依次执行git add .、git commit -m “…”、git push origin hexo提交网站相关的文件；</li>
-<li>执行hexo g -d生成网站并部署到GitHub上。</li>
-</ol>
-<p>这样一来，在GitHub上的<a href="http://CrazyMilk.github.io仓库就有两个分支，一个hexo分支用来存放网站的原始文件，一个master分支用来存放生成的静态网页。完美(" target="_blank" rel="external">http://CrazyMilk.github.io仓库就有两个分支，一个hexo分支用来存放网站的原始文件，一个master分支用来存放生成的静态网页。完美(</a> •̀ ω •́ )y！</p>
-<p>二、关于日常的改动流程<br>在本地对博客进行修改（添加新博文、修改样式等等）后，通过下面的流程进行管理。</p>
-<ol>
-<li>依次执行git add .、git commit -m “…”、git push origin hexo指令将改动推送到GitHub（此时当前分支应为hexo）；</li>
-<li>然后才执行hexo g -d发布网站到master分支上。</li>
-</ol>
-<p>虽然两个过程顺序调转一般不会有问题，不过逻辑上这样的顺序是绝对没问题的（例如突然死机要重装了，悲催….的情况，调转顺序就有问题了）。</p>
-<p>三、本地资料丢失后的流程<br>当重装电脑之后，或者想在其他电脑上修改博客，可以使用下列步骤：</p>
-<ol>
-<li>使用git clone git@github.com:CrazyMilk/CrazyMilk.github.io.git拷贝仓库（默认分支为hexo）；</li>
-<li>在本地新拷贝的<a href="http://CrazyMilk.github.io文件夹下通过Git" target="_blank" rel="external">http://CrazyMilk.github.io文件夹下通过Git</a> bash依次执行下列指令：npm install hexo、npm install、npm install hexo-deployer-git（记得，不需要hexo init这条指令）。</li>
-</ol>
-<p>the end…<br>本文采用如上方法在家中电脑写了这篇文章。</p>
+        <h2 id="DigitalOcean反向代理google失败"><a href="#DigitalOcean反向代理google失败" class="headerlink" title="DigitalOcean反向代理google失败"></a>DigitalOcean反向代理google失败</h2><h3 id="议题-vps可以访问谷歌-准备用nginx搭建反向代理-这样不用翻墙也可以通过vps访问谷歌"><a href="#议题-vps可以访问谷歌-准备用nginx搭建反向代理-这样不用翻墙也可以通过vps访问谷歌" class="headerlink" title="议题:vps可以访问谷歌,准备用nginx搭建反向代理,这样不用翻墙也可以通过vps访问谷歌"></a>议题:vps可以访问谷歌,准备用nginx搭建反向代理,这样不用翻墙也可以通过vps访问谷歌</h3><h4 id="尝试一"><a href="#尝试一" class="headerlink" title="尝试一"></a>尝试一</h4><p>按照这篇文章(<a href="http://www.v2ex.com/t/126028" target="_blank" rel="external">http://www.v2ex.com/t/126028</a>) 中的方式进行了nginx配置,尝试http方式失败,直接申请了ssl证书开始尝试https方式反代谷歌,对应的nginx配置文件为(nginx.conf_google见文章结尾)。<br>配置好nginx后访问我的https域名(<a href="https://www.wendellup.com" target="_blank" rel="external">https://www.wendellup.com</a>) ,google主页是可以显示的,但是只要一搜索就跳转到<a href="https://www.wendellup.com/ipv4/sorry/IndexRedirect?continue=https://www.google.com/search%3" target="_blank" rel="external">https://www.wendellup.com/ipv4/sorry/IndexRedirect?continue=https://www.google.com/search%3</a>…..<br><img src="http://ww2.sinaimg.cn/large/ab1cb1a6gw1f3rkvca4unj20rb0d4wfn.jpg" alt=""><br>好郁闷,一直找不到原因。纠结了好长时间,不知是配置问题还是环境问题。于是乎尝试配置反代百度,对应的nginx配置文件为(nginx.conf_baidu见文章结尾)重启后nginx后访问域名,主页展现后搜索都正常,这下可以确认不是配置问题了。<br><img src="http://ww3.sinaimg.cn/large/ab1cb1a6gw1f3rkwf56o1j20sr0e340j.jpg" alt=""><br><img src="http://ww2.sinaimg.cn/large/ab1cb1a6gw1f3rkvfwmisj20pw0evq75.jpg" alt=""></p>
+<h4 id="尝试二"><a href="#尝试二" class="headerlink" title="尝试二"></a>尝试二</h4><p>确认不是配置问题后尝试了github上知名wen.lu的配置方法(<a href="https://github.com/cuber/ngx\_http\_google\_filter\_module/blob/master/README.zh-CN.md" target="_blank" rel="external">https://github.com/cuber/ngx\_http\_google\_filter\_module/blob/master/README.zh-CN.md</a>) ,按照他的安装配置方式进行搭建。搭建成功后访问我的https域名(<a href="https://www.wendellup.com" target="_blank" rel="external">https://www.wendellup.com</a>) ,主页访问正常,但一搜索也出现问题。<br><img src="http://ww4.sinaimg.cn/large/ab1cb1a6gw1f3rkvi15xfj20wr0g1gpz.jpg" alt=""><br>在网上进行了搜索(vps的ip被谷歌当成机器人),大概原因是因为有人用DO和我相邻的IP段对google做坏事,导致我的vps的ip无法正常反代google。这样也大致猜出尝试一中反代谷歌搜索失败的原因咯。</p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>一顿操作只能反代baidu成功,哈哈哈,纯当学习了吧。翻墙还是老老实实的用我的<a href="http://gjsq.me/3799512" target="_blank" rel="external">greenVPN</a>吧。</p>
 
       
     </div>
@@ -349,7 +327,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/hexo/" rel="tag">#hexo</a>
+            <a href="/tags/nginx/" rel="tag">#nginx</a>
+          
+            <a href="/tags/vps/" rel="tag">#vps</a>
           
         </div>
       
@@ -358,17 +338,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/04/27/hexo加上next主题及其他设置/" rel="next" title="hexo加上next主题及其他设置">
-                <i class="fa fa-chevron-left"></i> hexo加上next主题及其他设置
+              <a href="/2016/04/30/如何在不同电脑上更新hexo博客/" rel="next" title="'如何在不同电脑上更新hexo博客'">
+                <i class="fa fa-chevron-left"></i> '如何在不同电脑上更新hexo博客'
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/05/12/DigitalOcean反向代理google失败/" rel="prev" title="DigitalOcean反向代理google失败">
-                DigitalOcean反向代理google失败 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -394,8 +370,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/04/30/如何在不同电脑上更新hexo博客/"
-           data-title="'如何在不同电脑上更新hexo博客'" data-url="http://wendellup.github.io/2016/04/30/如何在不同电脑上更新hexo博客/">
+      <div class="ds-thread" data-thread-key="2016/05/12/DigitalOcean反向代理google失败/"
+           data-title="DigitalOcean反向代理google失败" data-url="http://wendellup.github.io/2016/05/12/DigitalOcean反向代理google失败/">
       </div>
     
   </div>
@@ -497,7 +473,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#DigitalOcean反向代理google失败"><span class="nav-number">1.</span> <span class="nav-text">DigitalOcean反向代理google失败</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#议题-vps可以访问谷歌-准备用nginx搭建反向代理-这样不用翻墙也可以通过vps访问谷歌"><span class="nav-number">1.1.</span> <span class="nav-text">议题:vps可以访问谷歌,准备用nginx搭建反向代理,这样不用翻墙也可以通过vps访问谷歌</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#尝试一"><span class="nav-number">1.1.1.</span> <span class="nav-text">尝试一</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#尝试二"><span class="nav-number">1.1.2.</span> <span class="nav-text">尝试二</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#总结"><span class="nav-number">1.1.3.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
         </section>
